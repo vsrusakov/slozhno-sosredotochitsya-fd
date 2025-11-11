@@ -2,3 +2,27 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+
+:root {
+  --bg-image-dark: url(../images/cover-image-dark.png);
+  --bg-image-light: url(../images/cover-image-light.png);
+  --bg-color-dark: #000028;
+  --bg-color-light: #FFF1F7;
+  --accent-color-dark: #FF0070;
+  --accent-color-light: #FF8DCB;
+  --page-padding-modile: 10px;
+  --corner-square-size: 25px;
+  --header-title-color-dark: #DB00FF;
+  --header-title-color-light: #FFC2E6;
+  --title-decor-color-dark: #000028;
+  --title-decor-color-light: #353430;
+
+  --bg-image: var(--bg-image-dark);
+  --bg-color: var(--bg-color-dark, #000028);
+  --accent-color: var(--accent-color-dark, #FF0070);
+  --page-padding: var(--page-padding-modile, 10px);
+  --corner-square-color: var(--accent-color);
+  --header-title-color: var(--header-title-color-dark, #DB00FF);
+  --title-decor-color: var(--title-decor-color-dark, #000028);
+  --header-decor-color: var(--accent-color);
+}

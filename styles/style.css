@@ -1,5 +1,113 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  font-size: 18px;
+  font-family: 'IBM Plex mono', sans-serif;
+  background-image: var(--bg-image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: var(--bg-color);
+}
+
+.header {
+  position: relative;
+  height: 100vh;
+  min-height: 668px;
+  padding: var(--page-padding);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr min-content 1fr;
+  justify-items: flex-end;
+  align-items: center;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  width: var(--corner-square-size);
+  height: var(--corner-square-size);
+  border-block-start: 1px solid var(--header-decor-color);
+  border-inline-end: 1px solid var(--header-decor-color);
+  inset-block-start: var(--page-padding);
+  inset-inline-end: var(--page-padding);
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  width: var(--corner-square-size);
+  height: var(--corner-square-size);
+  border-block-end: 1px solid var(--header-decor-color);
+  border-inline-start: 1px solid var(--header-decor-color);
+  inset-block-end: var(--page-padding);
+  inset-inline-start: var(--page-padding);
+}
+
+.header__decorated-text {
+  position: absolute;
+  inset-block-start: 0;
+  top: var(--page-padding);
+  inset-inline-end: calc(var(--page-padding) + var(--corner-square-size, 25px) + 3px);
+  color: var(--header-decor-color);
+  line-height: 140%;
+  text-transform: uppercase;
+}
+
+.header__decorated-text::before {
+  content: '';
+  position: absolute;
+  top: calc(50% - 9px / 2);
+  inset-inline-end: -19px;
+  width: 9px;
+  height: 9px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--accent-color);
+}
+
+/* .header__theme-menu  */
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* .header__theme-menu-item */
+
+.header__theme-menu-button {
+  line-height: 100%;
+  padding-inline: 13px;
+  padding-block: 1.5px;
+  text-transform: lowercase;
+  color: var(--header-decor-color);
+  background-color: transparent;
+  border: none;
+}
+/* ОСТАНОВИЛСЯ НА ОБВОДКЕ 
+.header__theme-menu-button:hover {
+  cursor: pointer;
+  border: 1px solid rgba(var(--header-decor-color), 0.4);
+} */
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--header-decor-color);
+}
+
+.header__title {
+  justify-self: flex-start;
+  line-height: 82.5%;
+  color: var(--header-title-color);
+  font-weight: bold;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  color: var(--title-decor-color);
+  line-height: 130%;
+  font-weight: bold;
 }
