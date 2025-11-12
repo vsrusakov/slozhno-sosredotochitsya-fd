@@ -13,6 +13,7 @@
 
 .header {
   position: relative;
+  width: 100%;
   height: 100vh;
   min-height: 668px;
   padding: var(--page-padding);
@@ -78,22 +79,30 @@
 /* .header__theme-menu-item */
 
 .header__theme-menu-button {
+  display: inline-block;
   line-height: 100%;
   padding-inline: 13px;
-  padding-block: 1.5px;
+  padding-block-start: 1.5px;
+  padding-block-end: 4.5px;
   text-transform: lowercase;
   color: var(--header-decor-color);
   background-color: transparent;
-  border: none;
+  border: 1px solid transparent;
 }
-/* ОСТАНОВИЛСЯ НА ОБВОДКЕ 
+
 .header__theme-menu-button:hover {
   cursor: pointer;
-  border: 1px solid rgba(var(--header-decor-color), 0.4);
-} */
+  border: 1px solid var(--header-decor-color-hover);
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border-block-end-color: var(--header-decor-color);
+}
 
 .header__theme-menu-button_active {
   border: 1px solid var(--header-decor-color);
+  pointer-events: none;
 }
 
 .header__title {
