@@ -19,6 +19,11 @@
   --title-decor-color-light: #353430;
   --header-decor-color-hover-dark: rgb(255, 0, 112, 0.4);
   --header-decor-color-hover-light: rgb(50, 49, 45, 0.4);
+  --main-section-margin-mobile: 20px;
+  --main-section-header-color-dark: #ff0070;
+  /* --main-section-header-color-light: ; */
+  --text-color-dark: #F1B2CE;
+  --text-color-light: #353430;
 
   --bg-image: var(--bg-image-dark);
   --bg-color: var(--bg-color-dark, #000028);
@@ -29,4 +34,7 @@
   --title-decor-color: var(--title-decor-color-dark, #000028);
   --header-decor-color: var(--accent-color);
   --header-decor-color-hover: var(--header-decor-color-hover-dark);
+  --main-section-margin: var(--main-section-margin-mobile);
+  --main-section-header-color: var(--main-section-header-color-dark);
+  --text-color: var(--text-color-dark);
 }

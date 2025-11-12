@@ -120,3 +120,30 @@
   line-height: 130%;
   font-weight: bold;
 }
+
+.main {
+  padding-inline: var(--page-padding);
+}
+
+.main__section {
+  display: grid;
+  gap: 20px;
+}
+
+.main__section:not(:last-child) {
+  margin-block-end: var(--main-section-margin);
+}
+
+.main__section-header {
+  font-size: inherit;
+  color: var(--main-section-header-color);
+}
+
+.article {
+  color: var(--text-color);
+  line-height: 130%;
+}
+
+.article-title {
+  margin-block-end: 10px;
+}
