@@ -28,7 +28,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr min-content 1fr;
-  justify-items: flex-end;
+  justify-items: end;
   align-items: center;
   margin-block-end: var(--page-margin-bottom);
 }
@@ -128,23 +128,26 @@
   margin-block-end: var(--page-margin-bottom);
 }
 
-.main__section {
+.main__section,
+.main__section-advices-wrapper {
   display: grid;
+  grid-template-columns: 1fr;
   gap: 20px;
+  align-items: start;
 }
 
 .main__section:not(:last-child) {
   margin-block-end: var(--main-section-margin);
 }
 
-.main__section-header {
+.main__section-header,
+.main__section-subheader {
   font-size: inherit;
   color: var(--main-section-header-color);
 }
 
-.main__section-subheader {
-  font-size: inherit;
-  color: var(--main-section-header-color);
+.main__section-images {
+  gap: 10px;
 }
 
 .article {
@@ -172,15 +175,18 @@
   outline: 1px solid currentColor;
 }
 
-.main__image-section {
+.main__section-advice-images {
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
 }
 
-.section-image {
+.advice-image {
+  /* display: block; */
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .footer {
@@ -222,4 +228,75 @@
   background-color: var(--accent-color);
   color: var(--title-decor-color);
   line-height: 130%;
+}
+
+@media (width >= 768px) {
+  :root {
+    --page-padding: 20px;
+    --page-margin-bottom: 60px;
+  }
+  .header {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .header__theme-menu {
+    grid-column: 2;
+  }
+
+  .header__title {
+    position: relative;
+    inset-inline-start: calc(-1 * var(--page-padding));
+    grid-column: 1 / -1;
+  }
+
+  .header__description {
+    grid-column: 2;
+  }
+
+  .main__section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* .main__section-reasons {
+    grid-template-rows: repeat(auto-fit, min-content);
+  } */
+
+  .main__section-reasons .article {
+    grid-column: 2 / 4;
+  }
+
+  .main__section-factors .article {
+    grid-column: 1 / 4;
+  }
+
+  .main__section-advices .main__section-advices-wrapper {
+    grid-column: 2 / 4;
+  }
+
+  .main__section-advice-images {
+    gap: 20px;
+  }
+
+  .main__section-advice-images .main__section-header {
+    grid-column: 1 / -1;
+  }
+
+  .advice-image:nth-of-type(1) {
+    grid-column: 1 / 3;
+  }
+
+  .advice-image:nth-of-type(2) {
+    grid-row: 2 / 4;
+    grid-column: 3;
+  }
+
+  .advice-image:nth-of-type(3) {
+    grid-row: 3 / 5;
+    grid-column: 1;
+  }
+
+  .advice-image:nth-of-type(5) {
+    grid-row: 4;
+    grid-column: 2 / 4;
+  }
 }
