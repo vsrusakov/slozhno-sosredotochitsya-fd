@@ -9,4 +9,14 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --bg-image: url(../images/cover-image-dark.png);
+  --bg-color: #000028;
+  --accent-color: rgb(255, 0, 112);
+  --corner-square-color: rgb(255, 0, 112);
+  --page-title-color: #DB00FF;
+  --title-decor-color: #000028;
+  --header-decor-color: #ff0070;
+  --header-decor-color-hover: rgb(255, 0, 112, 0.4);
+  --main-section-header-color: #ff0070;
+  --text-color: #F1B2CE;
 }
