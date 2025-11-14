@@ -129,7 +129,7 @@
 }
 
 .main__section,
-.main__section-advices-wrapper {
+.main__section-content-wrapper {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
@@ -235,6 +235,11 @@
     --page-padding: 20px;
     --page-margin-bottom: 60px;
   }
+
+  .page-title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
   .header {
     grid-template-columns: 1fr 1fr;
   }
@@ -265,11 +270,16 @@
     grid-column: 2 / 4;
   }
 
-  .main__section-factors .article {
+  .main__section-factors .main__section-content-wrapper {
     grid-column: 1 / 4;
+    grid-template-columns: 1fr;
   }
 
-  .main__section-advices .main__section-advices-wrapper {
+  /* .main__section-factors .article {
+    grid-column: 1 / 4;
+  } */
+
+  .main__section-advices .main__section-content-wrapper {
     grid-column: 2 / 4;
   }
 
@@ -299,4 +309,25 @@
     grid-row: 4;
     grid-column: 2 / 4;
   }
+}
+
+@media (width >= 1024px) {
+  .header__theme-menu {
+    grid-column: 1 / -1;
+    justify-self: center;
+    align-self: flex-start;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .main__section-factors .main__section-content-wrapper{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* .main__section-factors .article {
+    grid-column: initial;
+    grid-row: 2;
+  } */
 }
