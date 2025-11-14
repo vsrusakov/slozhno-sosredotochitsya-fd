@@ -10,10 +10,10 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --bg-image: url(../images/cover-image-light.png);
-  --bg-color: #FFF1F7;
-  --accent-color: #FF8DCB;
+  --bg-color: #fff1f7;
+  --accent-color: #ff8dcb;
   --corner-square-color: #353430;
-  --page-title-color: #FFC2E6;
+  --page-title-color: #ffc2e6;
   --title-decor-color: #353430;
   --header-decor-color: #353430;
   --header-decor-color-hover: rgb(50, 49, 45, 0.4);
@@ -24,19 +24,15 @@
 @media (prefers-color-scheme: light) {
   :root {
     --bg-image: url(../images/cover-image-light.png);
-    --bg-color: #FFF1F7;
-    --accent-color: #FF8DCB;
+    --bg-color: #fff1f7;
+    --accent-color: #ff8dcb;
     --corner-square-color: #353430;
-    --page-title-color: #FFC2E6;
+    --page-title-color: #ffc2e6;
     --title-decor-color: #353430;
     --header-decor-color: #353430;
     --header-decor-color-hover: rgb(50, 49, 45, 0.4);
     --main-section-header-color: #353430;
     --text-color: #353430;
-  }
-
-  .header__decorated-text {
-    display: none;
   }
 
   .header__decorated-text {
