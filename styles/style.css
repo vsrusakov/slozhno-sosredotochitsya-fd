@@ -77,6 +77,14 @@
   box-shadow: 0 0 4px 2px var(--accent-color);
 }
 
+.theme-light .header__decorated-text {
+  display: none;
+}
+
+.theme-dark .header__decorated-text {
+  display: initial;
+}
+
 /* .header__theme-menu  */
 
 .header__theme-menu-list {
@@ -228,14 +236,6 @@
   background-color: var(--accent-color);
   color: var(--title-decor-color);
   line-height: 130%;
-}
-
-.theme-light .header__decorated-text {
-  display: none;
-}
-
-.theme-light .header__decorated-text {
-  display: none;
 }
 
 @media (width >= 768px) {
